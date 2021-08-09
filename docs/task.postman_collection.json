@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "740ff45d-6d3c-4631-9e72-7c1b33c09cf0",
+		"_postman_id": "50074526-853a-430b-9a31-c22dffa7acf3",
 		"name": "task",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -133,14 +133,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/api/products",
+					"raw": "localhost:5000/api/cart",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
 						"api",
-						"products"
+						"cart"
 					]
 				}
 			},
@@ -177,6 +177,65 @@
 							"key": "quantity",
 							"value": "30"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add product to cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"quantity\": 5,\n  \"product_id\": \"61110fbeb6ca292eefdacab0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/cart",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"quantity\": 5,\n  \"product_id\": \"61110fbeb6ca292eefdacab0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/cart",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"cart"
 					]
 				}
 			},
